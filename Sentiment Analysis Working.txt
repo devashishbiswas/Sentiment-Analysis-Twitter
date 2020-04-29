@@ -22,15 +22,3 @@ great = positive=1
 5. Calculation : Add , since the polarity is more than zero hence the statement is positive.
 
 
-------
-python packages ::
-1. textblob
-2. tweepy -- open source wrapper written in python to communicate with twitter
-3. dev.twitter.com
-4. twitter username: @deva_mail86
-
-5. 
-Access Token : 96775980-yEnKKduHMAGfaADtzRxma7rQQNaJZ08KkPw7Tbzas
-Access Token Secret : XIVoA8bDKRRdcCHLTe6owUGDKdZLASCkT5UDiZpcbwfrm
-API key: AWcDvyaDAAb8aPdKr9MNome2t
-API secret key: CkOtT1aJFkLyvSVXimZGgtp7SPH1uagpWrRUPVrUSJEYU26ld4
