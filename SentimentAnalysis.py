@@ -19,13 +19,8 @@ class SentimentAnalysis:
         noOfTweetsToProcess = int(input("Enter how many tweets to process: "))
 
         # searching for tweets
-        self.tweets = tweepy.Cursor(twitterAPI.search, q=searchTerm, lang = "de").items(noOfTweetsToProcess)
-        
-        for status in self.tweets:
-            new_entry = []
-            status = status._json
-            if status['lang'] == 'en':
-                print('devashish biswas')
+        self.tweets = tweepy.Cursor(twitterAPI.search, q=searchTerm, lang = "de").items(noOfTweetsToProcess)       
+
 
         # Open/create a file to append data to
         csvFile = open('twitterData.csv', 'a')
@@ -50,7 +45,7 @@ class SentimentAnalysis:
             #Append to temp so that we can store in csv later. I use encode UTF-8
             self.tweetText.append(self.cleanTweet(tweet.text).encode('utf-8'))
             #print (tweet.text.translate(non_bmp_map))  
-            print(tweet)
+            #print(tweet)
             analysis = TextBlob(tweet.text)
             # print(analysis.sentiment)  # print tweet's polarity
             polarity += analysis.sentiment.polarity  # adding up polarities to find the average later
@@ -107,7 +102,7 @@ class SentimentAnalysis:
         elif (polarity > -1 and polarity <= -0.6):
             print("Strongly Negative")
 
-        '''print()
+        print()
         print("Detailed Report: ")
         print(str(positive) + "% people thought it was positive")
         print(str(wpositive) + "% people thought it was weakly positive")
@@ -116,8 +111,8 @@ class SentimentAnalysis:
         print(str(wnegative) + "% people thought it was weakly negative")
         print(str(snegative) + "% people thought it was strongly negative")
         print(str(neutral) + "% people thought it was neutral")
-'''
-        #self.plotPieChart(positive, wpositive, spositive, negative, wnegative, snegative, neutral, searchTerm, noOfTweetsToProcess)
+
+        self.plotPieChart(positive, wpositive, spositive, negative, wnegative, snegative, neutral, searchTerm, noOfTweetsToProcess)
 
 
     def cleanTweet(self, tweet):
