@@ -1,0 +1,36 @@
+Sentiment Analysis Steps:
+{Lexicons-- Dictionary of pre satisfied set of words}
+
+1. Tokenization
+
+eg. " The movie was great !" ---Divide into individual token
+the,movie,was , great,!
+
+
+2. Cleaning the data -- remove all characters that does not add any value to analytics .remove the !
+
+the, movie,was,great
+
+3. Removing Stop words : Not add any value to analytics like the ,was ,etc
+
+movie, great
+
+4. Classification : classify the rest words as negative positive or neutral. Give score 1 for positive,-1 for negative and 0 for neutral
+movie = neutral =0
+great = positive=1
+
+5. Calculation : Add , since the polarity is more than zero hence the statement is positive.
+
+
+------
+python packages ::
+1. textblob
+2. tweepy -- open source wrapper written in python to communicate with twitter
+3. dev.twitter.com
+4. twitter username: @deva_mail86
+
+5. 
+Access Token : 96775980-yEnKKduHMAGfaADtzRxma7rQQNaJZ08KkPw7Tbzas
+Access Token Secret : XIVoA8bDKRRdcCHLTe6owUGDKdZLASCkT5UDiZpcbwfrm
+API key: AWcDvyaDAAb8aPdKr9MNome2t
+API secret key: CkOtT1aJFkLyvSVXimZGgtp7SPH1uagpWrRUPVrUSJEYU26ld4
